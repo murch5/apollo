@@ -3,12 +3,8 @@ import process
 
 import factory_manager as fm
 
-class ProcessManager(fm.FactoryManager):
-
-    def set_module(self):
-        return process
+class ProcessManager(fm.FactoryStack):
     pass
-
 
 #t = ProcessManager()
 #t.get_available_class_types()
