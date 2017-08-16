@@ -23,8 +23,7 @@ class FFT_2D(Process):
         out = data
 
         out = abs(fftpack.fft2(data))
-        print(out)
-        print(out.shape)
+
         bins = np.arange(0,len(out))
         data_dict = {"x":bins,"FFT":out}
         out = np.log(out)
@@ -46,3 +45,12 @@ class Periodogram(Process):
         out = out[["fq","PSD"]]
 
         return out
+
+class Spectrogram(Process):
+
+    def do(self,data):
+        out = data
+
+        out = signal.spectrogram(data)
+
+        return
