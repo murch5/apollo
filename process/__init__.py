@@ -11,4 +11,5 @@ from process.table import GroupByValue
 from process.signal import FFT
 from process.signal import FFT_2D
 from process.signal import Periodogram
+from process.signal import Spectrogram
 from process.process_manager import ProcessManager
