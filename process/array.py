@@ -21,7 +21,7 @@ class Slice(Process):
 
         out = data[sli]
 
-        print(out.shape)
+
         return out
 
 class Squeeze(Process):

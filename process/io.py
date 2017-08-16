@@ -9,8 +9,6 @@ class Export(Process):
         out = data
 
         output_file = "./output/" + self.get("file_name") + ".tif"
-        #skimage_io.imsave(output_file, data, plugin="tifffile")
-        #logger.debug("--- Export: Save image " + self.name + ".tif")
 
         with tff.TiffWriter(output_file) as tif:
             tif.save(out)
