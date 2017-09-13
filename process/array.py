@@ -95,3 +95,19 @@ class Transect(Process):
         out = val
 
         return out
+
+class Iterate_by_axis(Process):
+
+    def do(self,data):
+        out = data
+        data_accum = []
+
+        axis = self.get("axis")
+
+        data_temp = np.rollaxis(data,axis)
+        for x in data_temp:
+            o = self.call_all("do",x)
+            data_accum.append(o)
+
+        out = data_accum
+        return out
