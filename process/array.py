@@ -21,7 +21,6 @@ class Slice(Process):
 
         out = data[sli]
 
-
         return out
 
 class Squeeze(Process):
@@ -57,7 +56,6 @@ class Retype(Process):
         type = self.get("type")
 
         out= data.astype(type)
-
 
         return out
 
