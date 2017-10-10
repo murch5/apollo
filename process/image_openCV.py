@@ -18,14 +18,9 @@ class Threshold(Process):
     def do(self, data):
         out = data
 
-        print(data.dtype)
-
-
         thresh = self.get("thresh")
 
         out = cv2.threshold(data,thresh,1,cv2.THRESH_BINARY)
-
-        print(out[1].dtype)
 
         return out[1]
 
@@ -37,9 +32,6 @@ class Open(Process):
 
         kernel = np.ones((5,5),np.uint8)
         out = cv2.morphologyEx(data,cv2.MORPH_OPEN,kernel)
-
-        print(out)
-        print(type(out))
 
         return out
 
