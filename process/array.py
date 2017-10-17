@@ -28,6 +28,7 @@ class Squeeze(Process):
     def do(self,data):
 
         axis = self.get("axis")
+
         out = data.squeeze(axis=axis)
 
         return out
@@ -35,8 +36,8 @@ class Squeeze(Process):
 class Project(Process):
 
     def do(self,data):
-
         out = data
+
         axis = self.get("axis")
         func = self.get("function")
 
@@ -44,7 +45,6 @@ class Project(Process):
             out = data.var(axis=axis)
         elif func == "mean":
             out = data.mean(axis=axis)
-
 
         return out
 
