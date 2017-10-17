@@ -51,3 +51,37 @@ class GaussianBlur(Process):
         out = cv2.GaussianBlur(data, (3,3),0)
 
         return out
+
+class BlobDetection(Process):
+
+    def do(self, data):
+        out = data
+
+        params = cv2.SimpleBlobDetector_Params()
+
+        params.thresholdStep = 0
+        params.minThreshold = 1
+        params.maxThreshold = 2
+        params.minRepeatability = 1
+        params.minDistBetweenBlobs = 10
+
+        params.filterByColor = 0
+        params.blobColor = 1
+
+        params.filterByArea = False
+
+        params.filterByConvexity = 0
+        params.minConvexity = 0.87
+
+        params.filterByInertia = 0
+        params.minInertiaRatio = 0.08
+
+        detector = cv2.SimpleBlobDetector_create(params)
+
+        blobs = detector.detect(data)
+
+        out = blobs
+
+
+
+        return out
