@@ -3,11 +3,13 @@ __version__ = "0.1.0"
 from process.process import Process
 from process.io import Export
 from process.image_skimage import Skeletonize
+from process.image_skimage import LabelRegions
 from process.image_openCV import AdaptiveThreshold
 from process.image_openCV import Threshold
 from process.image_openCV import Open
 from process.image_openCV import Convert
 from process.image_openCV import GaussianBlur
+from process.image_openCV import BlobDetection
 from process.array import Slice
 from process.array import Squeeze
 from process.array import Project
