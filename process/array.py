@@ -29,6 +29,8 @@ class Squeeze(Process):
 
         axis = self.get("axis")
 
+        print(data.shape)
+
         out = data.squeeze(axis=axis)
 
         return out
