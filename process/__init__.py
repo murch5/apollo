@@ -21,8 +21,8 @@ from process.table import SubsetByIndexName
 from process.table import SortByIndexLabel
 from process.table import Reindex
 from process.table import Filter
-from process.signal import FFT
-from process.signal import FFT_2D
-from process.signal import Periodogram
-from process.signal import Spectrogram
+from process.signal_processing import FFT
+from process.signal_processing import FFT_2D
+from process.signal_processing import Periodogram
+from process.signal_processing import Spectrogram
 from process.process_manager import ProcessManager
