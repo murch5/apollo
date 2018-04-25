@@ -21,6 +21,13 @@ from process.table import SubsetByIndexName
 from process.table import SortByIndexLabel
 from process.table import Reindex
 from process.table import Filter
+from process.table import FilterByVal
+from process.table import SortByVal
+from process.table import SortByIndex
+from process.table import Save
+from process.table import MaskIndex
+from process.sklearn import PCA
+from process.sklearn import SparsePCA
 from process.signal_processing import FFT
 from process.signal_processing import FFT_2D
 from process.signal_processing import Periodogram

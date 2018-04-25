@@ -1,0 +1,28 @@
+prog: Radiate
+project: Apollo
+version: 1.0.0
+description: Program description goes here
+epilog: other stuffs ...
+arguments:
+  -
+   name: "--xml"
+   dest: xml
+  -
+   name: ["--process_xml","-p"]
+   dest: process_xml
+  -
+   name: ["--input","-i"]
+   dest: input
+   nargs: '*'
+  -
+   name: ["--output","-o"]
+   dest: output
+  -
+   name: ["--hide","-H"]
+   dest: hide_output_flag
+   action: store_true
+
+glyph_l1: "  /ssss\\  "
+glyph_l2: " /sSSSSs\\ "
+glyph_l3: " \\sSSSSs/ "
+glyph_l4: "  \\ssss/  "
