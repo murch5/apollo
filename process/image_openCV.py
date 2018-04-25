@@ -2,8 +2,6 @@ from process.process import Process
 import cv2
 import numpy as np
 
-
-
 class AdaptiveThreshold(Process):
 
     def do(self,data):
